@@ -6,29 +6,17 @@
 //  Copyright (c) 2014年 Iino Daisuke. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 
-@interface MyLocationsTests : XCTestCase
+#import "Kiwi.h"
 
-@end
+SPEC_BEGIN(MathSpec)
 
-@implementation MyLocationsTests
+describe(@"Math", ^{
+    it(@"この計算式は合っておる", ^{
+        NSUInteger a = 16;
+        NSUInteger b = 26;
+        [[theValue(a + b) should] equal:theValue(42)];
+    });
+});
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-@end
+SPEC_END

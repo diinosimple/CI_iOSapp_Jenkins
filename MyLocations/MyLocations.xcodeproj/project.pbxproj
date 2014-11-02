@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DD8A41D5E70340FD92B9CBB /* libPods-MyLocationsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79ACFA0C43CD95D4E20386B6 /* libPods-MyLocationsTests.a */; };
 		7C8F949818AF435E00C4E6A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8F949718AF435E00C4E6A6 /* Foundation.framework */; };
 		7C8F949A18AF435E00C4E6A6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8F949918AF435E00C4E6A6 /* CoreGraphics.framework */; };
 		7C8F949C18AF435E00C4E6A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8F949B18AF435E00C4E6A6 /* UIKit.framework */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27A0C13F7B46DAAE6AE03CB8 /* Pods-MyLocationsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLocationsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLocationsTests/Pods-MyLocationsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		762F3A17D126B535E1484BF5 /* Pods-MyLocationsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLocationsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLocationsTests/Pods-MyLocationsTests.release.xcconfig"; sourceTree = "<group>"; };
+		79ACFA0C43CD95D4E20386B6 /* libPods-MyLocationsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyLocationsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F949418AF435E00C4E6A6 /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F949718AF435E00C4E6A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7C8F949918AF435E00C4E6A6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +86,7 @@
 				7C8F94BA18AF435E00C4E6A6 /* XCTest.framework in Frameworks */,
 				7C8F94BC18AF435E00C4E6A6 /* UIKit.framework in Frameworks */,
 				7C8F94BB18AF435E00C4E6A6 /* Foundation.framework in Frameworks */,
+				2DD8A41D5E70340FD92B9CBB /* libPods-MyLocationsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +100,7 @@
 				7C8F94BF18AF435E00C4E6A6 /* MyLocationsTests */,
 				7C8F949618AF435E00C4E6A6 /* Frameworks */,
 				7C8F949518AF435E00C4E6A6 /* Products */,
+				9BC7FEA500EE9C8ABDC8D2FC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +121,7 @@
 				7C8F949918AF435E00C4E6A6 /* CoreGraphics.framework */,
 				7C8F949B18AF435E00C4E6A6 /* UIKit.framework */,
 				7C8F94B918AF435E00C4E6A6 /* XCTest.framework */,
+				79ACFA0C43CD95D4E20386B6 /* libPods-MyLocationsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,6 +173,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9BC7FEA500EE9C8ABDC8D2FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27A0C13F7B46DAAE6AE03CB8 /* Pods-MyLocationsTests.debug.xcconfig */,
+				762F3A17D126B535E1484BF5 /* Pods-MyLocationsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C8F94CC18AF435E00C4E6A6 /* Build configuration list for PBXNativeTarget "MyLocationsTests" */;
 			buildPhases = (
+				A99FB86E779606FB93B84E02 /* Check Pods Manifest.lock */,
 				7C8F94B418AF435E00C4E6A6 /* Sources */,
 				7C8F94B518AF435E00C4E6A6 /* Frameworks */,
 				7C8F94B618AF435E00C4E6A6 /* Resources */,
+				E6F4707FD495FCBD59FCD0E0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +275,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A99FB86E779606FB93B84E02 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F4707FD495FCBD59FCD0E0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyLocationsTests/Pods-MyLocationsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C8F949018AF435E00C4E6A6 /* Sources */ = {
@@ -392,6 +443,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyLocations/MyLocations-Prefix.pch";
 				INFOPLIST_FILE = "MyLocations/MyLocations-Info.plist";
@@ -405,6 +458,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyLocations/MyLocations-Prefix.pch";
 				INFOPLIST_FILE = "MyLocations/MyLocations-Info.plist";
@@ -415,6 +470,7 @@
 		};
 		7C8F94CD18AF435E00C4E6A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A0C13F7B46DAAE6AE03CB8 /* Pods-MyLocationsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyLocations.app/MyLocations";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -437,6 +493,7 @@
 		};
 		7C8F94CE18AF435E00C4E6A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 762F3A17D126B535E1484BF5 /* Pods-MyLocationsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyLocations.app/MyLocations";
 				FRAMEWORK_SEARCH_PATHS = (
